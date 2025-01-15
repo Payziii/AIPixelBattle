@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Изменение здесь */
+  padding: 10px; /* Для отступа */
+}
+#header {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Добавляем перенос */
+}
+#user-controls {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+#board {
+  display: grid;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  overflow-x: auto; /* Добавляем горизонтальный скролл */
+  max-width: 100%;
+}
+.pixel {
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#controls {
+display: flex;
+flex-direction: column;
+gap: 10px;
+width: 200px;
+}
+#controls input {
+padding: 10px;
+border: 1px solid black;
+}
+#controls button {
+padding: 10px;
+cursor: pointer;
+}
+#color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.color-option {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+#custom-color-wrapper {
+ display: flex;
+align-items: center;
+}
+#custom-color {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+width: 30px;
+height: 30px;
+border: none;
+cursor: pointer;
+background-color: transparent;
+}
+#custom-color::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+#custom-color::-webkit-color-swatch {
+  border: none;
+}
+#custom-color::-moz-color-swatch-wrapper {
+padding: 0;
+}
+#custom-color::-moz-color-swatch {
+border: none;
+}
+#selected-color-preview {
+width: 15px;
+height: 15px;
+border: 1px solid black;
+margin-top: 10px;
+margin-left: 5px;
+}
+#leaderboard {
+  margin-top: 0px;
+  border: 1px solid black;
+   width: 200px;
+  flex-shrink: 0;
+}
+#leaderboard h3 {
+text-align: center;
+}
+#leaderboard ul {
+list-style: none;
+padding: 0;
+}
+#leaderboard li {
+padding: 5px;
+border-bottom: 1px solid #eee;
+}
+#reset-container {
+  margin-top: 10px;
+}
