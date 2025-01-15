@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderLeaderboard(leaderboardData) {
         leaderboardList.innerHTML = '';
-        leaderboardData.forEach(user => {
+        leaderboardData.filter(user => user.pixel_count > 0).forEach(user => {
             const li = document.createElement('li');
             li.textContent = `${user.username}: ${user.pixel_count}`;
             leaderboardList.appendChild(li);
